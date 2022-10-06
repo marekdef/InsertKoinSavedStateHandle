@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/masterFragment">
+
+    <fragment
+        android:id="@+id/masterFragment"
+        android:name="pl.senordeveloper.insertkoinsavedstatehandle.MasterFragment"
+        android:label="MasterFragment" >
+        <action
+            android:id="@+id/action_masterFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="pl.senordeveloper.insertkoinsavedstatehandle.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </fragment>
+</navigation>
